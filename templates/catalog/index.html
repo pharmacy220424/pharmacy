@@ -4,6 +4,21 @@
 {% block title %}{% trans "catalogs" %}{% endblock title %}
 {% block header %}{% endblock header %}
 {% block content %}
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">
+			<h4>{{ invoice.organization }}</h4>
+		</div>
+		<div class="card-body">
+			<p>{{ invoice.datei | date:"d.m.Y" }}</p>
+			<p>{% trans "numb" %}: {{ invoice.numb }}</p>
+		</div>
+		<div class="card-footer">
+		</div>
+	</div>
+	<div class="div-button-center">		
+	</div>
+</div>
 <div id="print_content">
 	<h2>{% trans "catalogs" %}</h2>
 	<p><a href="{% url 'catalog_create' invoice_id%}">{% trans "Add" %}</a></p>					
