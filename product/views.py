@@ -474,8 +474,10 @@ def catalog_list(request):
                 # Отправить товар в корзину
                 basket = Basket()
                 basket.catalog_id = catalog_id
-                #basket.price = float(int(price.replace(",00","")))
-                basket.price = int(price)
+                try:
+                    basket.price = float(int(price.replace(",00","")))
+                except:
+                    basket.price = price
                 basket.user_id = user
                 basket.save()
                 message = _('Item added to basket')
