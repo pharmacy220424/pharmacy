@@ -475,7 +475,7 @@ def catalog_list(request):
                 basket = Basket()
                 basket.catalog_id = catalog_id
                 #basket.price = float(int(price.replace(",00","")))
-                basket.price = price
+                basket.price = int(price)
                 basket.user_id = user
                 basket.save()
                 message = _('Item added to basket')
