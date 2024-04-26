@@ -345,7 +345,7 @@ msgstr "Шығу"
 
 #: .\templates\base.html:106
 msgid "Log In"
-msgstr "Войти"
+msgstr "Кіру үшін"
 
 #: .\templates\base.html:107
 msgid "Sign up"
